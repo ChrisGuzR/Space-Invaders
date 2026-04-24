@@ -21,13 +21,16 @@ public class Main : MonoBehaviour
         eWeaponType.spread, eWeaponType.shield
     };
 
+    public int cols = 10;
+    public float spacing = 2f;
+
     private BoundCheck bndCheck;
 
      void Awake()
     {
         S = this;
         bndCheck = GetComponent<BoundCheck>();
-        Invoke(nameof(SpawnEnemy), 1f / enemySpawnPerSecond);
+        //Invoke(nameof(SpawnEnemy), 1f / enemySpawnPerSecond);
 
         WEAP_DICT = new Dictionary<eWeaponType, WeaponDefinition>();
         foreach (WeaponDefinition def in weaponDefinitions)
@@ -36,7 +39,12 @@ public class Main : MonoBehaviour
         }
     }
     // Start is called before the first frame update
-    public void SpawnEnemy()
+    void Start()
+    {
+    }
+
+    
+    /*public void SpawnEnemy()
     {
         if (!SpawnEnemies)
         {
@@ -58,7 +66,7 @@ public class Main : MonoBehaviour
         pos.y = bndCheck.camHeight + enemyInset;
         go.transform.position = pos;
         Invoke(nameof(SpawnEnemy), 1f / enemySpawnPerSecond);
-    }
+    }*/
 
     void DelayedRestart()
     {

@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move(); 
         if (bndCheck.LocIs(BoundCheck.eScreenLocs.offDown))
         {
             Destroy(gameObject);
@@ -36,9 +35,7 @@ public class Enemy : MonoBehaviour
 
     public virtual void Move()
     {
-        Vector3 tempPos = pos;
-        tempPos.y -= speed * Time.deltaTime;
-        pos = tempPos;
+        
     }
 
     void OnCollisionEnter(Collision coll)
