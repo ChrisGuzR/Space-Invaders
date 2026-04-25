@@ -38,10 +38,13 @@ public class Enemy : MonoBehaviour
         
     }
 
+
+
     void OnCollisionEnter(Collision coll)
     {
         GameObject otherGO = coll.gameObject;
         ProjectileHero p = otherGO.GetComponent<ProjectileHero>();
+        EnemyBullet eb = otherGO.GetComponent<EnemyBullet>();
         if (p != null)
         {
             if (bndCheck.isOnScreen)
@@ -58,6 +61,10 @@ public class Enemy : MonoBehaviour
                 }
             }
                 Destroy(otherGO);
+        }else if (eb != null)
+        {
+            // Enemy should NOT react to its own bullets
+            return;
         }
         else
         {

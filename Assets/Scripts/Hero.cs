@@ -22,6 +22,8 @@ public class Hero : MonoBehaviour
 
     public delegate void WeaponFireDelegate();
     public event WeaponFireDelegate fireEvent;
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -59,12 +61,22 @@ public class Hero : MonoBehaviour
         }
     }
 
+    
+
     void OnTriggerEnter(Collider other)
     {
         Transform rootT = other.gameObject.transform.root;
         GameObject go = rootT.gameObject;
         if (go == lastTriggerGo) return;
         lastTriggerGo = go;
+
+        EnemyBullet bullet = go.GetComponent<EnemyBullet>();
+        if ( bullet != null)
+        {
+            shieldLevel--;
+            Destroy(go);
+            return;
+        }
 
         Enemy enemy = go.GetComponent<Enemy>();
         PowerUp pUp = go.GetComponent<PowerUp>();
@@ -142,4 +154,6 @@ public class Hero : MonoBehaviour
             w.SetType(eWeaponType.none);
         }
     }
+
+    
 }

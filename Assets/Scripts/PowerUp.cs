@@ -54,22 +54,6 @@ public class PowerUp : MonoBehaviour
         cube.transform.rotation = Quaternion.Euler(rotPerSecond * Time.time);
         
 
-        float u = (Time.time - (birthTime + lifeTime)) / fadeTime;
-        if (u >= 1)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
-        if (u > 0)
-        {
-            Color c = cubeMat.color;
-            c.a = 1f - u;
-            cubeMat.color = c;
-            c = letter.color;
-            c.a = 1f - (u*0.5f);
-            letter.color = c;
-        }
-
         if (!bndCheck.isOnScreen)
         {
             Destroy(gameObject);

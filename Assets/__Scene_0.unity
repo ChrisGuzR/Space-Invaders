@@ -349,6 +349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 768189808}
+  - component: {fileID: 768189810}
   - component: {fileID: 768189806}
   - component: {fileID: 768189807}
   - component: {fileID: 768189809}
@@ -444,6 +445,29 @@ MonoBehaviour:
   screenLocs: 0
   camWidth: 0
   camHeight: 0
+--- !u!136 &768189810
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768189805}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Height: 2.9
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &800562466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -943,8 +967,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24059a4287db2743b838ebad1375c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  dropDistance: 1.5
+  speed: 6
+  dropDistance: 2
+  bulletPrefab: {fileID: 3682257332821924413, guid: 2886d27b34fe6d646ab160f5d2e88b58, type: 3}
+  shootChance: 0.5
 --- !u!4 &1563974059
 Transform:
   m_ObjectHideFlags: 0
