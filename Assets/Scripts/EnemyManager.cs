@@ -11,6 +11,8 @@ public class EnemyManager : MonoBehaviour
 
     public GameObject bulletPrefab;
     public float shootChance = 0.01f;
+    public int level = 1;
+    bool spawningNext = false;
 
     void Update()
     {
@@ -23,6 +25,32 @@ public class EnemyManager : MonoBehaviour
         direction *= -1;
         transform.position += Vector3.down * dropDistance;
     }
+    if (GetComponentsInChildren<Enemy>().Length == 0 && !spawningNext)
+{
+    spawningNext = true;
+    Invoke(nameof(NextLevel), 2f);
+}
+    }
+
+    void NextLevel()
+    {
+        level++;
+        Debug.Log("Level: " + level);
+        IncreaseDifficulty();
+        SpawnNewWave();
+    }
+
+    void SpawnNewWave()
+    {
+        EnemySpawner spawner = GetComponent<EnemySpawner>();
+        spawner.SpawnGrid();
+        spawningNext = false;
+    }
+
+    void IncreaseDifficulty()
+    {
+        speed += 0.5f;
+        shootChance += 0.002f;
     }
 
         void TryShoot()

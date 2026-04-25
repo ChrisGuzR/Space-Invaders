@@ -18,8 +18,12 @@ public class EnemySpawner : MonoBehaviour
         SpawnGrid();
     }
 
-    void SpawnGrid()
+    public void SpawnGrid()
     {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
         float startX = -(cols - 1) * xSpacing * 0.5f;
         float startY = Camera.main.orthographicSize - enemyInsetDefault - 2f;
 
