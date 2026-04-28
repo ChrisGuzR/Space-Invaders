@@ -21,7 +21,7 @@ public class PowerUp : MonoBehaviour
     private Rigidbody rigid;
     private BoundCheck bndCheck;
     private Material cubeMat;
-    public float fallSpeed = 100f;
+    public float fallSpeed = 1f;
 
     void Awake()
     {

@@ -971,6 +971,7 @@ MonoBehaviour:
   dropDistance: 2
   bulletPrefab: {fileID: 3682257332821924413, guid: 2886d27b34fe6d646ab160f5d2e88b58, type: 3}
   shootChance: 0.5
+  level: 1
 --- !u!4 &1563974059
 Transform:
   m_ObjectHideFlags: 0

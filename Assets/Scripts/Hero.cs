@@ -67,6 +67,7 @@ public class Hero : MonoBehaviour
     {
         Transform rootT = other.gameObject.transform.root;
         GameObject go = rootT.gameObject;
+
         if (go == lastTriggerGo) return;
         lastTriggerGo = go;
 
@@ -77,17 +78,22 @@ public class Hero : MonoBehaviour
             Destroy(go);
             return;
         }
-
         Enemy enemy = go.GetComponent<Enemy>();
         PowerUp pUp = go.GetComponent<PowerUp>();
-        if (enemy != null)
+        EnemyManager man = go.GetComponent<EnemyManager>();
+        if (enemy != null || man != null)
         {
             shieldLevel--;
             Destroy(go);
-        }else if(pUp != null)
+            Main.HERO_DIED();
+
+
+        }
+        else if(pUp != null)
         {
             AbsorbPowerUp(pUp);
         }
+
         else
         {
             Debug.LogWarning("Shield trigger hit by non-Enemy: " + go.name);
