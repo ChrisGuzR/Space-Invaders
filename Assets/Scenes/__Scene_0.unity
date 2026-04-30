@@ -950,11 +950,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3585859576235679137, guid: 1b8a08b001fbe134b85f6b9521c0f820, type: 3}
-  rows: 5
-  cols: 6
+  enemyPrefab2: {fileID: 3319825933102930435, guid: ac8336763c0c047aca9a469c10d3f448, type: 3}
+  enemyPrefab3: {fileID: 6217192625371338093, guid: 8b3b585cc9dbb43ff97ab0579e85fd71, type: 3}
+  enemyPrefabBoss: {fileID: 9185519998980853174, guid: 486b535a9aae8446f9346d286631b31d, type: 3}
+  rows: 3
+  cols: 7
   xSpacing: 15
   ySpacing: 10
   enemyInsetDefault: 5
+  level: 0
+  enemyManagerLevel: {fileID: 0}
 --- !u!114 &1563974058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,7 +973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  dropDistance: 2
+  dropDistance: 0.5
   bulletPrefab: {fileID: 3682257332821924413, guid: 2886d27b34fe6d646ab160f5d2e88b58, type: 3}
   shootChance: 0.5
   level: 1

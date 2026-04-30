@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     [Header("Inscribed")]
     public float speed = 10f;
     public float fireRate = 0.3f;
-    public float health = 10;
+    public float health = 5;
     public int score = 100;
     public float powerUpDropChance = 1f;
 
@@ -35,7 +35,9 @@ public class Enemy : MonoBehaviour
 
     public virtual void Move()
     {
-        
+        Vector3 tempPos = pos;
+        tempPos.y -= speed * Time.deltaTime;
+        pos = tempPos;
     }
 
 

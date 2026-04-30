@@ -11,4 +11,37 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/__Scene_0.unity
     guid: c327b1ae785c24559b5c07c428f5987b
+  - enabled: 1
+    path: Assets/Scenes/LevelOne.unity
+    guid: faf805c822c190440babb5be035a51bb
+  - enabled: 1
+    path: Assets/Scenes/LevelTwo.unity
+    guid: 4f1fb752faac8fa4c908eb897fc785f0
+  - enabled: 1
+    path: Assets/Scenes/LevelThree.unity
+    guid: fc63ee06c55c9da41bd66e448bcb69c1
+  - enabled: 1
+    path: Assets/Scenes/LevelFour.unity
+    guid: 35f060f4f34ecce418a6a129b1b12484
+  - enabled: 1
+    path: Assets/Scenes/LevelFive.unity
+    guid: efe641e84574c274ca01d6099d164d21
+  - enabled: 1
+    path: Assets/Scenes/LevelSix.unity
+    guid: db77dbd101153524f9d85de124d1e7b6
+  - enabled: 1
+    path: Assets/Scenes/LevelSeven.unity
+    guid: b9c4b5943fea32546a63ed340f7d5249
+  - enabled: 1
+    path: Assets/Scenes/LevelEight.unity
+    guid: 9a2ea7d5c95b99448aeae7d0f95f2ae6
+  - enabled: 1
+    path: Assets/Scenes/LevelNine.unity
+    guid: 4737cc9e28d91c042b014ae607d6c6ab
+  - enabled: 1
+    path: Assets/Scenes/LevelTen.unity
+    guid: 6356334e72d4d7e4a8326a2d0d19912e
+  - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: 1f2769132354f074490ac06f94b0665c
   m_configObjects: {}
